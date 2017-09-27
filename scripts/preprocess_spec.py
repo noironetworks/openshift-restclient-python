@@ -26,7 +26,7 @@ from collections import OrderedDict
 
 import urllib3
 
-from constants import KUBERNETES_BRANCH, SPEC_VERSION, PACKAGE_NAME
+from .constants import KUBERNETES_BRANCH, SPEC_VERSION, PACKAGE_NAME
 
 # these four constants are shown as part of this example in []:
 # "[watch]Pod[List]" is the deprecated version of "[list]Pod?[watch]=True"
