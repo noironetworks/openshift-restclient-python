@@ -113,7 +113,10 @@ def add_custom_objects_spec(spec):
 def process_swagger(spec, client_language):
     spec = add_custom_objects_spec(spec)
 
-    apply_func_to_spec_operations(spec, strip_tags_from_operation_id)
+    try:
+        apply_func_to_spec_operations(spec, strip_tags_from_operation_id)
+    except KeyError:
+        pass
 
     operation_ids = {}
     apply_func_to_spec_operations(spec, lambda op, _: operator.setitem(
