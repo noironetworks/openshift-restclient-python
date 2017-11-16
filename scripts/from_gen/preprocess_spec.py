@@ -125,7 +125,7 @@ def process_swagger(spec):
         apply_func_to_spec_operations(
             spec, remove_watch_operations, operation_ids)
     except PreprocessingException as e:
-        print(e.message)
+        print(e)
 
     remove_model_prefixes(spec, 'io.k8s')
 
