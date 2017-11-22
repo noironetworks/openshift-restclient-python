@@ -36,7 +36,6 @@ def extract_requirements(filename):
     with open(filename, 'r') as requirements_file:
         return requirements_file.read().splitlines()
 
-
 setup(
     name=PACKAGE_NAME,
     version=CLIENT_VERSION,
